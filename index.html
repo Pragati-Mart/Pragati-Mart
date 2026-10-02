@@ -1,0 +1,264 @@
+:::writing? variant="standard" id="58321" title="Pragati Mart — index.html"
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Pragati Mart | Freshness Every Day</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; } :root { --green: #168a45; --dark-green: #0d6532; --light-green: #eaf8ef; --dark: #17221b; --gray: #66706a; --white: #ffffff; --border: #e6ebe7; } body { font-family: Arial, Helvetica, sans-serif; color: var(--dark); background: #ffffff; line-height: 1.6; } /* NAVBAR */ nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--border); backdrop-filter: blur(10px); } .nav-container { max-width: 1150px; margin: auto; padding: 16px 22px; display: flex; justify-content: space-between; align-items: center; } .logo { font-size: 24px; font-weight: 800; color: var(--green); text-decoration: none; } .logo span { color: var(--dark); } .nav-links { display: flex; gap: 28px; list-style: none; } .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 15px; transition: 0.3s; } .nav-links a:hover { color: var(--green); } .menu-btn { display: none; border: none; background: none; font-size: 26px; cursor: pointer; } /* HERO */ .hero { min-height: 80vh; background: linear-gradient(135deg, #effbf3, #ffffff); display: flex; align-items: center; } .hero-container { max-width: 1150px; width: 100%; margin: auto; padding: 70px 22px; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; } .hero h1 { font-size: clamp(42px, 6vw, 72px); line-height: 1.05; margin-bottom: 22px; letter-spacing: -2px; } .hero h1 span { color: var(--green); } .hero p { color: var(--gray); max-width: 570px; font-size: 18px; margin-bottom: 30px; } .btn { display: inline-block; padding: 14px 24px; background: var(--green); color: white; text-decoration: none; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; transition: 0.3s; } .btn:hover { background: var(--dark-green); transform: translateY(-2px); } .hero-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 40px; box-shadow: 0 20px 50px rgba(20, 60, 35, 0.08); text-align: center; } .hero-icon { font-size: 90px; margin-bottom: 15px; } .hero-card h3 { font-size: 25px; margin-bottom: 8px; } .hero-card p { font-size: 15px; margin: 0; } /* SECTIONS */ section { padding: 85px 22px; } .section-container { max-width: 1150px; margin: auto; } .section-title { text-align: center; margin-bottom: 45px; } .section-title h2 { font-size: 38px; margin-bottom: 10px; } .section-title p { color: var(--gray); } /* PRODUCTS */ #products { background: #fafcfb; } .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; } .product { background: white; border: 1px solid var(--border); border-radius: 18px; padding: 25px; text-align: center; transition: 0.3s; } .product:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07); } .product-icon { height: 100px; display: flex; justify-content: center; align-items: center; font-size: 58px; margin-bottom: 15px; } .product h3 { margin-bottom: 7px; } .product p { color: var(--gray); font-size: 14px; } /* ABOUT */ .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; } .about-box { background: var(--light-green); border-radius: 24px; padding: 50px; text-align: center; font-size: 90px; } .about-text h2 { font-size: 38px; margin-bottom: 18px; } .about-text p { color: var(--gray); margin-bottom: 15px; } /* SERVICES */ #services { background: #fafcfb; } .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; } .service { padding: 30px; background: white; border: 1px solid var(--border); border-radius: 18px; } .service-icon { font-size: 38px; margin-bottom: 15px; } .service h3 { margin-bottom: 8px; } .service p { color: var(--gray); font-size: 15px; } /* CONTACT */ .contact { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 50px; } .contact-info h2 { font-size: 38px; margin-bottom: 15px; } .contact-info > p { color: var(--gray); margin-bottom: 25px; } .contact-item { margin: 18px 0; } .contact-item strong { display: block; margin-bottom: 3px; } .contact-item span { color: var(--gray); } .contact-form { border: 1px solid var(--border); border-radius: 20px; padding: 30px; } .form-group { margin-bottom: 18px; } .form-group label { display: block; margin-bottom: 7px; font-weight: 600; } .form-group input, .form-group textarea { width: 100%; padding: 13px; border: 1px solid #d9e0db; border-radius: 9px; font-family: inherit; outline: none; } .form-group input:focus, .form-group textarea:focus { border-color: var(--green); } textarea { min-height: 120px; resize: vertical; } /* FOOTER */ footer { background: var(--dark); color: white; text-align: center; padding: 30px 20px; } footer p { color: #b8c2bc; font-size: 14px; } /* WHATSAPP */ .whatsapp { position: fixed; right: 22px; bottom: 22px; width: 58px; height: 58px; border-radius: 50%; background: #25d366; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 28px; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3); z-index: 999; } /* RESPONSIVE */ @media (max-width: 900px) { .products-grid { grid-template-columns: repeat(2, 1fr); } .hero-container, .about-grid, .contact { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; } .hero { min-height: auto; } } @media (max-width: 650px) { .nav-links { display: none; position: absolute; left: 0; right: 0; top: 65px; background: white; flex-direction: column; padding: 20px; border-bottom: 1px solid var(--border); gap: 16px; } .nav-links.active { display: flex; } .menu-btn { display: block; } .products-grid { grid-template-columns: 1fr; } .hero-card { padding: 30px; } section { padding: 65px 18px; } } </style> </head> <body> <!-- NAVIGATION --> <nav> <div class="nav-container"> <a href="#home" class="logo"> Pragati <span>Mart</span> </a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#products" onclick="closeMenu()">Products</a></li>
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#services" onclick="closeMenu()">Services</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</div>
+
+
+</nav> <!-- HOME --> <section class="hero" id="home"> <div class="hero-container">
+
+
+  <div>
+    <h1>
+      Freshness for<br>
+      <span>Every Day.</span>
+    </h1>
+
+    <p>
+      Welcome to Pragati Mart — your neighborhood store for
+      fresh dairy products, delicious Havmor ice creams,
+      paneer, butter and refreshing soft drinks.
+    </p>
+
+    <a href="#products" class="btn">
+      Explore Products →
+    </a>
+  </div>
+
+  <div class="hero-card">
+    <div class="hero-icon">🛒</div>
+    <h3>Pragati Mart</h3>
+    <p>Quality products. Everyday essentials. Friendly service.</p>
+  </div>
+
+</div>
+
+
+</section> <!-- PRODUCTS --> <section id="products"> <div class="section-container">
+
+
+  <div class="section-title">
+    <h2>Our Products</h2>
+    <p>Everything you need, all in one place.</p>
+  </div>
+
+  <div class="products-grid">
+
+    <div class="product">
+      <div class="product-icon">🍦</div>
+      <h3>Havmor Ice Cream</h3>
+      <p>Enjoy delicious Havmor ice creams in a variety of flavors.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🥛</div>
+      <h3>Milk</h3>
+      <p>Fresh and quality milk for your everyday needs.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🥣</div>
+      <h3>Curd</h3>
+      <p>Fresh curd for a healthy and refreshing meal.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🥤</div>
+      <h3>Buttermilk</h3>
+      <p>Cool and refreshing buttermilk for every day.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🧈</div>
+      <h3>Butter</h3>
+      <p>Quality butter for cooking, breakfast and baking.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🧀</div>
+      <h3>Paneer</h3>
+      <p>Fresh paneer for delicious homemade dishes.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🥤</div>
+      <h3>Soft Drinks</h3>
+      <p>A wide variety of refreshing soft drinks.</p>
+    </div>
+
+    <div class="product">
+      <div class="product-icon">🛍️</div>
+      <h3>Daily Essentials</h3>
+      <p>Convenient products for your everyday shopping.</p>
+    </div>
+
+  </div>
+</div>
+
+
+</section> <!-- ABOUT --> <section id="about"> <div class="section-container">
+
+
+  <div class="about-grid">
+
+    <div class="about-box">
+      🏪
+    </div>
+
+    <div class="about-text">
+      <h2>About Pragati Mart</h2>
+
+      <p>
+        Pragati Mart is your local destination for fresh dairy
+        products, ice creams and refreshing beverages.
+      </p>
+
+      <p>
+        We focus on providing quality products and a convenient
+        shopping experience for our customers every day.
+      </p>
+
+      <p>
+        From your morning milk to an evening ice cream,
+        Pragati Mart is here for your everyday needs.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</section> <!-- SERVICES --> <section id="services"> <div class="section-container">
+
+
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Simple and convenient shopping for everyone.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service">
+      <div class="service-icon">🛒</div>
+      <h3>Daily Shopping</h3>
+      <p>
+        Find everyday dairy products, beverages and essentials
+        at Pragati Mart.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="service-icon">🍦</div>
+      <h3>Ice Cream</h3>
+      <p>
+        Treat yourself with delicious Havmor ice creams
+        and refreshing desserts.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="service-icon">📞</div>
+      <h3>Easy Enquiry</h3>
+      <p>
+        Contact us for product availability and other
+        store-related enquiries.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+</section> <!-- CONTACT --> <section id="contact"> <div class="section-container">
+
+
+  <div class="contact">
+
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+
+      <p>
+        Have a question? Contact Pragati Mart and
+        we'll be happy to help.
+      </p>
+
+      <div class="contact-item">
+        <strong>📍 Address</strong>
+        <span>Near Parivar Char Rasta opp. of Sai baba temple, Vadodara, Gujarat, India</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>📞 Phone</strong>
+        <span>+91 6358220905</span>
+      </div>
+
+      <div class="contact-item">
+        <strong>🕐 Opening Hours</strong>
+        <span>Every Day • 6:00 AM – 10:00 PM</span>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          placeholder="How can we help?"
+          required
+        ></textarea>
+      </div>
+
+      <button class="btn" type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+</section> <!-- FOOTER --> <footer> <p> © <span id="year"></span> Pragati Mart. All rights reserved. </p> </footer> <!-- WHATSAPP -->
+<a
+class="whatsapp"
+href="https://wa.me/6358220905"
+target="_blank"
+title="Chat on WhatsApp"
+
+
+☎
+
+
+</a> <script> // Mobile menu function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); } function closeMenu() { document.getElementById("navLinks").classList.remove("active"); } // Contact form function sendMessage(event) { event.preventDefault(); const name = document.getElementById("name").value; const phone = document.getElementById("phone").value; const message = document.getElementById("message").value; alert( "Thank you, " + name + "! Your message has been received." ); event.target.reset(); } // Current year document.getElementById("year").textContent = new Date().getFullYear(); </script> </body> </html> :::
